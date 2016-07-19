@@ -1,0 +1,40 @@
+<html>
+
+<body>
+
+<form action="/login" method="post">
+    <input type="text" placeholder="Enter your name" name="userName"/>
+    <button type="submit">Login</button>
+</form>
+
+
+
+{{#name}}
+Messages by {{name}}!
+{{/name}}
+
+<ol>
+    {{#messages}}
+    <li>{{.}}</li>
+    {{/messages}}
+</ol>
+
+<form action ="/add-message" method="post">
+    <input type ="text" placeholder ="Enter your message" name = "text" size="30"/>
+
+    <button type="submit"> Submit </button>
+</form>
+
+    <form action="/edit-message" method="post">
+        <input type="text" placeholder="Enter message ID " name="update"/>
+        <input type="text" placeholder="Enter new message" name="updateMessage"/>
+        <button type="submit">Edit</button>
+    </form>
+    </body>
+
+</html>
+    <!--&lt;!&ndash;<form action ="/delete-message" method="post" >&ndash;&gt;-->
+        <!--&lt;!&ndash;<button type="button">Delete</button>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;</form>&ndash;&gt;-->
+<!--</form>-->
