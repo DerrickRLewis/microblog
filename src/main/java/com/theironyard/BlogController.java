@@ -28,26 +28,27 @@ public class BlogController {
 
     @RequestMapping(path = "/", method = RequestMethod.GET)
     public String home(Model model, HttpSession session){
+
         List<Message> messageList = message.findAll();
-        model.addAttribute("name", session.getAttribute("userName"));
+
+//        model.addAttribute("name", session.getAttribute("userName"));
         model.addAttribute("messages",messageList);
 //        model.addAttribute("messages",session.getAttribute("messages"));
-        model.addAttribute("deleteMessage" ,session.getAttribute("deleteMessage"));
+        model.addAttribute("updateMessage" ,session.getAttribute("updateMessage"));
         return "home";
     }
 
 
-    @RequestMapping(path ="/login", method = RequestMethod.POST)
-    public String login (HttpSession session, String userName){
-        session.setAttribute("userName",userName);
-        return "redirect:/";
-    }
+////    @RequestMapping(path ="/login", method = RequestMethod.POST)
+////    public String login (HttpSession session, String userName){
+////        session.setAttribute("userName",userName);
+////        return "redirect:/";
+//    }
 
 
 
     @RequestMapping(path = "/add-message", method = RequestMethod.POST)
     public String inputMessage (HttpSession session, String text ){
-
         session.setAttribute("messages",text);
         message.save(new Message(text));
 
@@ -58,8 +59,7 @@ public class BlogController {
      * edit feature is not working
      * looking for fix to this issue
       */
-@Modifying
-@Query
+
     @RequestMapping(path ="/edit-message", method = RequestMethod.POST)
     public  String editMessage(HttpSession session , int id,String text){
 

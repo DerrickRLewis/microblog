@@ -15,10 +15,7 @@ public class Message {
     @Column(nullable = false)
     String text;
 
-    public Message(int id, String text) {
-        this.id = id;
-        this.text = text;
-    }
+    
 
     public Message() {
     }
