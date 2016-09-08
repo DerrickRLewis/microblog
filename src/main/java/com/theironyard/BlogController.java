@@ -9,17 +9,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
-/**
- *
- */
-
 @Controller
 public class BlogController {
 
-
     @Autowired
     BlogRepository message;
-
 
     @RequestMapping(path = "/", method = RequestMethod.GET)
     public String home(Model model, HttpSession session) {
