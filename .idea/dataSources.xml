@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="2353578723">
+  <component name="DataSourceManagerImpl" format="xml" hash="3876466926">
     <data-source source="LOCAL" name="PostgreSQL - microblog@localhost" uuid="e8edaed8-01fb-4850-9fdc-3d0805568c9d">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/microblog</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="PostgreSQL - postgres@localhost" uuid="846acc0c-757d-43d5-b326-d1266ec071c6">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/postgres</jdbc-url>
     </data-source>
   </component>
 </project>
